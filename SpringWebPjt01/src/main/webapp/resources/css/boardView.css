@@ -1,0 +1,105 @@
+@charset "UTF-8";
+
+#boardContent {
+	width : 958px;
+	height : 300px;
+	padding : 20px;
+	border : 1px solid #d5d5d5;
+	text-align : center;
+	margin-bottom : 20px;
+}
+
+#timeInfo, #boardInfo {
+	width : 1000px;
+	height : 20px;
+	padding : 5px 0px;
+}
+
+#timeInfo ul li {
+	list-style : none;
+	display : inline-block;
+	margin-right : 10px;
+	font-size : 17px;
+	color : #368aff;
+}
+
+#boardInfo ul {
+	float : right;
+	padding-right : 2px;
+}
+
+#boardInfo ul li {
+	list-style : none;
+	display : inline-block;
+	margin-left : 10px;
+	font-size : 14px;
+	color : #C3C3C3;
+	font-style: oblique;
+}
+h1 {
+	font-size : 2.5em;
+	margin-bottom : 10px;
+	color : #242424;
+	padding : 5px 0;
+}
+
+table {
+	width : 1000px;
+	margin : 0 auto;
+	text-align : center;
+}
+
+textarea {
+	border: none;
+	resize : none;
+	outline : none;
+	width : 950px;
+	height : 300px;
+	font-size : 14px;
+}
+
+#imgFile {
+	width : 500px;
+	margin : 0px auto;
+	text-align : center;
+	background-color : #eaeaea;
+}
+
+.bxSlider {
+	margin : 0 auto;
+	text-align : center;
+	width : 400px;
+	height : 400px;
+}
+
+.bxSlider div {
+	margin : 0 auto;
+}
+
+.imgs {
+	margin : 0 auto;
+	width : auto;
+	height : auto;
+	max-width : 400px;
+	max-height : 400px;
+	vertical-align : middle;
+}
+
+#contactBtn {
+	width : 1000px;
+	margin : 0 auto;
+	text-align : center;
+}
+
+.btns {
+	width : 80px;
+	border : none;
+	color : white;
+	background-color : #368aff;
+	line-height : 40px;
+	margin : 10px;
+}
+
+.btns:hover {
+	cursor : pointer;
+}

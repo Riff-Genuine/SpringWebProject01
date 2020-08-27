@@ -1,0 +1,62 @@
+@charset "UTF-8";
+
+caption {
+	font-size : 2em;
+	margin-bottom : 15px;
+}
+
+table {
+	text-align : center;
+	margin : 15px auto;
+	width : 600px;
+}
+
+input, select {
+	margin : 5px 0;
+	width : 600px;
+	line-height : 50px;
+	box-sizing: border-box;
+	padding : 0 10px;
+}
+
+textarea {
+	margin : 5px 0;
+	width : 600px;
+	height : 200px;
+	line-height : 20px;
+	box-sizing: border-box;
+	padding : 15px;
+	resize : none;
+}
+
+select {
+	height : 54px;
+	vertical-align : middle;
+}
+
+input[type=submit], input[type=button] {
+	width : 80px;
+	border : none;
+	color : white;
+	background-color : #368aff;
+	line-height : 40px;
+	margin : 10px;
+}
+
+input[type=submit], input[type=button]:hover {
+	cursor : pointer;
+}
+
+a {
+	text-decoration: none;
+	color : #368aff;
+}
+
+#writerTd {
+	float : right;
+	margin-bottom : 10px;
+}
+
+#answerTd {
+	padding : 50px;
+}

@@ -1,0 +1,75 @@
+@charset "UTF-8";
+
+table {
+	margin : 0 auto;
+	text-align : center;
+	width : 1000px;
+	font-size : 14px;
+}
+
+#postTb {
+	margin-bottom : 40px;
+}
+
+.boxArea {
+	float : right;
+}
+
+.boxArea input {
+	margin-left : 5px;
+	padding : 8px;
+	border : none;
+	color : white;
+	background-color : #368aff;
+}
+
+.boxArea input:hover {
+	cursor : pointer;
+}
+
+td {
+	padding : 10px 0;
+}
+
+.line1 {
+	background-color : #B2CCFF;
+	color : white;
+	font-size : 15px;
+}
+
+
+input[type=checkbox] {
+	width : 15px;
+	height : 15px;
+}
+
+#pageUl {
+	text-align : center;
+}
+
+.pageLi {
+	display : inline-block;
+	padding : 0 5px;
+	list-style : none;
+	font-size : 14px;
+}
+
+.hoverTr:hover {
+	background-color : #B2CCFF;
+	color : white;
+}
+
+a {
+	text-decoration : none;
+	color : #2d2d2d;
+}
+
+a:hover {
+	color : white;
+}
+
+#noMsg, #noQna, #noPost {
+	padding : 50px;
+	maring : 0 auto;
+	text-align : center;
+}

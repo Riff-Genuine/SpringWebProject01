@@ -1,0 +1,36 @@
+@charset "UTF-8";
+
+caption {
+	font-size : 2em;
+	margin-bottom : 15px;
+}
+
+#loginTb {
+	text-align : center;
+	margin : 20px auto;
+}
+
+input {
+	margin : 5px 0;
+	width : 400px;
+	height : 50px;
+	box-sizing: border-box;
+	padding : 0 10px;
+}
+
+input[type=submit] {
+	border : none;
+	color : white;
+	background-color : #368aff;
+	margin-bottom : 20px;
+}
+
+input[type=submit]:hover {
+	cursor : pointer;
+}
+
+a {
+	text-decoration: none;
+	color : gray;
+	margin : 0 5px;
+}

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration
+  PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-config.dtd">
+  
+<configuration>
+
+	<typeAliases>
+		<typeAlias type="com.carry.www.vo.MemberVO" alias="memberVO"/>
+		<typeAlias type="com.carry.www.vo.BoardVO" alias="boardVO"/>
+		<typeAlias type="com.carry.www.vo.QnaVO" alias="qnaVO"/>
+		<typeAlias type="com.carry.www.vo.MsgVO" alias="msgVO"/>
+		<typeAlias type="com.carry.www.vo.Criteria" alias="criteria"/>
+		<typeAlias type="com.carry.www.vo.FileVO" alias="fileVO"/>
+	</typeAliases>
+	
+</configuration>
+

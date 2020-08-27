@@ -1,0 +1,50 @@
+@charset "UTF-8";
+
+table {
+	margin : 0 auto;
+	text-align : center;
+	width : 1000px;
+	font-size : 14px;
+	color : #2d2d2d;
+}
+
+.line1 {
+	background-color : #B2CCFF;
+	color : white;
+	font-size : 15px;
+}
+
+td {
+	padding : 10px 0;
+}
+
+#pagingDiv {
+	width : 1000px;
+	margin : 10px auto;
+	text-align : center;
+}
+
+#pageUl {
+	text-align : center;
+}
+
+.pageLi {
+	display : inline-block;
+	padding : 0 5px;
+	list-style : none;
+	font-size : 14px;
+}
+
+.hoverTr:hover {
+	background-color : #B2CCFF;
+	color : white;
+}
+
+a {
+	text-decoration : none;
+	color : #2d2d2d;
+}
+
+a:hover {
+	color : white;
+}

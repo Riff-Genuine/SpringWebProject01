@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  
+<mapper namespace="msg">
+
+	<!-- 받은 메시지 개수 조회 -->
+	<select id="cntMsgTo" parameterType="String" resultType="int">
+		<![CDATA[
+			SELECT COUNT(no) FROM MSG WHERE no > 0 AND RECEIVERID = #{id}
+		]]>
+	</select>
+	
+	<!-- 받은 메시지 조회 -->
+	<select id="selectTo" parameterType="criteria" resultType="msgVO">
+		<![CDATA[
+			SELECT * FROM ( 
+		        SELECT NO, 
+		               TITLE, 
+		               CONTENT, 
+		               RECEIVER,
+		               RECEIVERID,
+		               SENDER,
+		               SENDERID,
+		               IDATE,
+		               ROW_NUMBER()
+		               OVER(ORDER BY NO DESC) AS RNUM FROM MSG
+		               ) MB
+			WHERE RECEIVERID=#{id} AND RNUM BETWEEN #{start} AND #{end}
+			ORDER BY NO DESC
+		]]>
+	</select>
+	
+	<!-- 보낸 메시지 개수 조회 -->
+	<select id="cntMsgFrom" parameterType="String" resultType="int">
+		<![CDATA[
+			SELECT COUNT(no) FROM MSG WHERE no > 0 AND SENDERID = #{id}
+		]]>
+	</select>
+	
+	<!-- 보낸 메시지 조회 -->
+	<select id="selectFrom" parameterType="criteria" resultType="msgVO">
+		<![CDATA[
+			SELECT * FROM ( 
+		        SELECT NO, 
+		               TITLE, 
+		               CONTENT, 
+		               RECEIVER,
+		               RECEIVERID,
+		               SENDER,
+		               SENDERID,
+		               IDATE,
+		               ROW_NUMBER()
+		               OVER(ORDER BY NO DESC) AS RNUM FROM MSG
+		               ) MB
+			WHERE SENDERID=#{id} AND RNUM BETWEEN #{start} AND #{end}
+			ORDER BY NO DESC
+		]]>
+	</select>
+	
+	<!-- 특정 메시지 조회 -->
+	<select id="selectNo" parameterType="int" resultType="msgVO">
+		<![CDATA[
+			SELECT * FROM MSG WHERE NO = #{no}
+		]]>
+	</select>
+	
+	<!-- 메시지 작성 -->
+	<insert id="insert" parameterType="msgVO">
+		<![CDATA[
+			INSERT INTO MSG(
+				NO,
+				TITLE,
+				RECEIVER,
+				RECEIVERID,
+				SENDER,
+				SENDERID,
+				CONTENT
+				) VALUES (
+				msgSeq.NEXTVAL,
+				#{title},
+				#{receiver},
+				#{receiverID},
+				#{sender},
+				#{senderID},
+				#{content}
+				)				
+		]]>
+	</insert>
+	
+	<!-- 메시지 삭제 -->
+	<delete id="delete" parameterType="int">
+		<![CDATA[
+			DELETE FROM MSG WHERE NO = #{no}
+		]]>
+	</delete>
+</mapper>

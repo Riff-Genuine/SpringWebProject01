@@ -1,0 +1,53 @@
+@charset "UTF-8";
+
+caption {
+	font-size : 2em;
+	margin-bottom : 15px;
+}
+
+#memInsertTb {
+	text-align : center;
+	margin : 20px auto;
+}
+
+input, select {
+	margin : 5px 0;
+	width : 400px;
+	line-height : 50px;
+	box-sizing: border-box;
+	padding : 0 10px;
+}
+
+select {
+	height : 54px;
+}
+
+input[name="yy"], select[name="mm"], input[name="dd"] {
+	width : 120px;
+}
+
+select[name="mm"] {
+	margin : 0 15px;
+}
+
+#sendCertiNum, #findPostCode {
+	width : 100px;
+}
+
+#email , #sample4_postcode{
+	width : 280px;
+	margin-right : 15px;
+}
+
+input[type=submit], input[type=button] {
+	border : none;
+	color : white;
+	background-color : #368aff;
+	margin-bottom : 20px;
+	height : 54px;
+}
+
+a {
+	color : red;
+	text-decoration : none;
+}

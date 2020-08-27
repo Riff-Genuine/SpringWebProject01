@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  	
+<mapper namespace="member">
+	
+	<select id="idCheck" parameterType="String" resultType="int">
+		<![CDATA[
+			SELECT count(*) FROM MEMBER WHERE ID=#{id}
+		]]>
+	</select>
+	
+	<select id="emailCheck" parameterType="String" resultType="int">
+		<![CDATA[
+			SELECT count(*) FROM MEMBER WHERE EMAIL=#{email}
+		]]>
+	</select>
+		
+	<select id="login" parameterType="memberVO" resultType="int">
+		<![CDATA[
+			SELECT count(*) FROM MEMBER WHERE ID=#{id} AND PW=#{pw}
+		]]>
+	</select>
+		
+	<select id="select" parameterType="memberVO" resultType="memberVO">
+		<![CDATA[
+			SELECT * FROM MEMBER WHERE ID=#{id} AND PW=#{pw}
+		]]>
+	</select>
+	
+	<select id="selectEmail" parameterType="String" resultType="memberVO">
+		<![CDATA[
+			SELECT * FROM MEMBER WHERE EMAIL=#{email}		
+		]]>
+	</select>
+		
+	<insert id="insert" parameterType="memberVO">
+		<![CDATA[
+			INSERT INTO MEMBER(
+				NO,
+				ID,
+				PW,
+				NAME,
+				EMAIL,
+				PHONE,
+				YY,
+				MM,
+				DD,
+				GENDER,
+				POSTCODE,
+				ROADADDRESS,
+				NUMADDRESS,
+				EXTRAADDRESS,
+				DETAILADDRESS
+				) VALUES (
+				memberSeq.NEXTVAL,
+				#{id},
+				#{pw},
+				#{name},
+				#{email},
+				#{phone},
+				#{yy},
+				#{mm},
+				#{dd},
+				#{gender},
+				#{postCode},
+				#{roadAddress},
+				#{numAddress},
+				#{extraAddress},
+				#{detailAddress}
+				)
+		]]>
+	</insert>
+	
+	<update id="update" parameterType="memberVO">
+		<![CDATA[
+			UPDATE MEMBER SET
+				NAME = #{name},
+				PW = #{pw},
+				EMAIL = #{email},
+				PHONE = #{phone},
+				GENDER = #{gender},
+				POSTCODE = #{postCode},
+				ROADADDRESS = #{roadAddress},
+				NUMADDRESS = #{numAddress},
+				EXTRAADDRESS = #{extraAddress},
+				DETAILADDRESS = #{detailAddress}
+			WHERE ID=#{id}
+		]]>
+	</update>
+	
+	<update id="modifyPw" parameterType="memberVO">
+		<![CDATA[
+			UPDATE MEMBER SET
+				PW = #{pw}
+			WHERE EMAIL = #{email}
+		]]>
+	</update>
+	
+	<delete id="delete" parameterType="memberVO">
+		<![CDATA[
+			DELETE FROM MEMBER WHERE ID = #{id}
+		]]>
+	</delete>
+		
+</mapper>
